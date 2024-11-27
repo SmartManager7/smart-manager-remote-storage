@@ -1,0 +1,56 @@
+[
+    {
+        "groupsInfo": [
+            {
+                "id": "8e66efeb-8f7f-4d41-b96a-10529489a82a",
+                "name": "MOG 1 - 1"
+            }
+        ],
+        "itemsInfo": [
+            {
+                "id": "16d1e034-d0cc-437a-9d1e-fac47679386f",
+                "group": "8e66efeb-8f7f-4d41-b96a-10529489a82a",
+                "name": "Published"
+            },
+            {
+                "id": "77d72005-028a-4345-b291-2e26c98258ad",
+                "group": "8e66efeb-8f7f-4d41-b96a-10529489a82a",
+                "name": "Pages"
+            },
+            {
+                "id": "cb80aec3-af98-44c7-9ad7-16da379798be",
+                "group": "8e66efeb-8f7f-4d41-b96a-10529489a82a",
+                "name": "1"
+            },
+            {
+                "id": "7bd9e971-4b8a-42c0-a636-7c67ca33d478",
+                "group": "8e66efeb-8f7f-4d41-b96a-10529489a82a",
+                "name": "123"
+            },
+            {
+                "id": "9a758538-3266-4def-a604-9e5297871096",
+                "group": "8e66efeb-8f7f-4d41-b96a-10529489a82a",
+                "name": "Select 11"
+            },
+            {
+                "id": "53c8f514-f286-48f3-a113-27043c0b4017",
+                "group": "8e66efeb-8f7f-4d41-b96a-10529489a82a",
+                "name": "Select 22"
+            },
+            {
+                "id": "5f2384b9-3696-42f4-9ed7-441f4226c40a",
+                "group": "8e66efeb-8f7f-4d41-b96a-10529489a82a",
+                "name": "Test with delete dbc"
+            },
+            {
+                "id": "8996d3c0-8223-40df-b404-d82309981979",
+                "group": "8e66efeb-8f7f-4d41-b96a-10529489a82a",
+                "name": "Is something"
+            }
+        ],
+        "remoteBaseUrl": "https://github.com/SmartManager7/smart-manager-remote-storage",
+        "remotePath": "packs/meta-options/8e66efeb-8f7f-4d41-b96a-10529489a82a.zip",
+        "id": "8e66efeb-8f7f-4d41-b96a-10529489a82a",
+        "version": "13105009-3524-47dd-810e-522d67c97f42"
+    }
+]
