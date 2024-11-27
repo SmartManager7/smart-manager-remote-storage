@@ -28,3 +28,6 @@ npm-debug.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# CI
+/@smart-manager
