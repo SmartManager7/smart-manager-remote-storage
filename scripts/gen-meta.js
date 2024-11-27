@@ -1,8 +1,14 @@
 const fs = require('fs');
 const path = require('path');
-const handleMultiplePromises = require('@smart-manager/tools/scripts/handle-multiple-promises');
-const readZipArchive = require('@smart-manager/tools/scripts/read-zip-archive');
-const generateUUIDFromWord = require('@smart-manager/tools/scripts/uuid');
+
+// Resolve tools path dynamically
+const localToolsPath = path.resolve(__dirname, '../node_modules/@smart-manager/tools');
+const workflowToolsPath = path.resolve(__dirname, '@smart-manager/tools');
+const toolsPath = fs.existsSync(localToolsPath) ? localToolsPath : workflowToolsPath;
+
+const handleMultiplePromises = require(`${toolsPath}/scripts/handle-multiple-promises`);
+const readZipArchive = require(`${toolsPath}/scripts/read-zip-archive`);
+const generateUUIDFromWord = require(`${toolsPath}/scripts/uuid`);
 
 const getPackMeta = (zipPath, zipFileName) => {
     return readZipArchive(zipPath).then(async readResult => {
@@ -30,7 +36,7 @@ const getPackMeta = (zipPath, zipFileName) => {
     });
 }
 
-const rebuildContentMeta = (type) => {
+const generateContentMeta = (type) => {
     const META_FILE_PATH = `packs/${type}/meta.json`;
     const PACKS_PATH = `packs/${type}`;
     fs.readdir(PACKS_PATH,  async (err, files) => {
@@ -43,4 +49,8 @@ const rebuildContentMeta = (type) => {
     });
 }
 
-rebuildContentMeta('meta-options');
+generateContentMeta('tags');
+generateContentMeta('meta-options');
+generateContentMeta('labels');
+generateContentMeta('data-buckets');
+generateContentMeta('extensions');

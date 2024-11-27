@@ -1,0 +1,38 @@
+name: Generate Meta
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  generate-meta:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Clone @smart-manager/tools repository
+      - name: Clone tools repository
+        run: git clone https://github.com/SmartManager7/smart-manager-tools.git @smart-manager/tools
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Step 4: Run the meta generation script
+      - name: Run generate-meta script
+        run: node scripts/gen-meta.js
+
+      # Step 5: Commit and push changes
+      - name: Commit changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add .
+          git commit -m "REGENERATE META [skip ci]" || echo "No changes to commit"
+
+      - name: Push changes
+        run: git push
