@@ -3,12 +3,15 @@ const path = require('path');
 
 // Resolve tools path dynamically
 const localToolsPath = path.resolve(__dirname, '../node_modules/@smart-manager/tools');
-const workflowToolsPath = path.resolve(__dirname, '@smart-manager/tools');
-const toolsPath = fs.existsSync(localToolsPath) ? localToolsPath : workflowToolsPath;
+const clonedToolsPath = path.resolve(__dirname, '../@smart-manager/tools');
 
-const handleMultiplePromises = require(`${toolsPath}/scripts/handle-multiple-promises`);
-const readZipArchive = require(`${toolsPath}/scripts/read-zip-archive`);
-const generateUUIDFromWord = require(`${toolsPath}/scripts/uuid`);
+// Check which path exists
+const toolsBasePath = fs.existsSync(localToolsPath) ? localToolsPath : clonedToolsPath;
+
+// Import utilities using the resolved tools path
+const handleMultiplePromises = require(`${toolsBasePath}/scripts/handle-multiple-promises`);
+const readZipArchive = require(`${toolsBasePath}/scripts/read-zip-archive`);
+const generateUUIDFromWord = require(`${toolsBasePath}/scripts/uuid`);
 
 const getPackMeta = (zipPath, zipFileName) => {
     return readZipArchive(zipPath).then(async readResult => {
@@ -39,14 +42,16 @@ const getPackMeta = (zipPath, zipFileName) => {
 const generateContentMeta = (type) => {
     const META_FILE_PATH = `packs/${type}/meta.json`;
     const PACKS_PATH = `packs/${type}`;
-    fs.readdir(PACKS_PATH,  async (err, files) => {
-        if (err) {
-            reject('Unable to scan directory: ' + err);
-            return console.log('Unable to scan directory: ' + err);
-        }
-        const res = (await handleMultiplePromises(files.filter(file => file.endsWith('.zip')), file => getPackMeta(path.join(PACKS_PATH, file), file))).filter(Boolean);
-        fs.writeFileSync(META_FILE_PATH, JSON.stringify(res, null, 4), { encoding: 'utf-8' });
-    });
+    if (fs.existsSync(PACKS_PATH)) {
+        fs.readdir(PACKS_PATH,  async (err, files) => {
+            if (err) {
+                reject('Unable to scan directory: ' + err);
+                return console.log('Unable to scan directory: ' + err);
+            }
+            const res = (await handleMultiplePromises(files.filter(file => file.endsWith('.zip')), file => getPackMeta(path.join(PACKS_PATH, file), file))).filter(Boolean);
+            fs.writeFileSync(META_FILE_PATH, JSON.stringify(res, null, 4), { encoding: 'utf-8' });
+        });
+    }
 }
 
 generateContentMeta('tags');

@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "type": "commonjs",
     "scripts": {
-        "get-meta": "node scripts/get-meta.js"
+        "gen-meta": "node scripts/gen-meta.js"
     },
     "devDependencies": {
         "file-type": "^18.5.0",
