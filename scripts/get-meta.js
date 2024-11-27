@@ -4,15 +4,13 @@ const handleMultiplePromises = require('@smart-manager/tools/scripts/handle-mult
 const readZipArchive = require('@smart-manager/tools/scripts/read-zip-archive');
 const generateUUIDFromWord = require('@smart-manager/tools/scripts/uuid');
 
-const GIT_REPO_URL = 'https://api.github.com/repos/SmartManager7/smart-manager-remote-storage';
-
-const getPackMeta = (zip, zipFileName) => {
-    return readZipArchive(zip).then(async readResult => {
+const getPackMeta = (zipPath, zipFileName) => {
+    return readZipArchive(zipPath).then(async readResult => {
         const entries = readResult.entries;
         const dataEntry = entries.find(entry => entry.fileName === 'data.json');
         if (dataEntry) {
             let groupsInfo, itemsInfo;
-            let { groupsData, itemsData, uuid, version } = JSON.parse((dataEntry.buffer || (await dataEntry.readFile())).toString());
+            let { groupsData, itemsData, id, version, remoteBaseUrl, remotePath } = JSON.parse((dataEntry.buffer || (await dataEntry.readFile())).toString());
 
             if (itemsData) {
                 groupsInfo = groupsData ? groupsData.map(group => ({
@@ -25,7 +23,7 @@ const getPackMeta = (zip, zipFileName) => {
                     name: mo.name,
                 }));
 
-                return {groupsInfo, itemsInfo, url: GIT_REPO_URL + PACKS_PATH + '/' + zipFileName, uuid: uuid || generateUUIDFromWord(zipFileName), version };
+                return {groupsInfo, itemsInfo, remoteBaseUrl, remotePath, id: id || generateUUIDFromWord(zipFileName), version };
             }
             return null;
         }
