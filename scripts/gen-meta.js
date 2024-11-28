@@ -11,28 +11,15 @@ const toolsBasePath = fs.existsSync(localToolsPath) ? localToolsPath : clonedToo
 // Import utilities using the resolved tools path
 const handleMultiplePromises = require(`${toolsBasePath}/scripts/handle-multiple-promises`);
 const readZipArchive = require(`${toolsBasePath}/scripts/read-zip-archive`);
-const generateUUIDFromWord = require(`${toolsBasePath}/scripts/uuid`);
 
-const getPackMeta = (zipPath, zipFileName) => {
+const getPackMeta = (zipPath) => {
     return readZipArchive(zipPath).then(async readResult => {
         const entries = readResult.entries;
-        const dataEntry = entries.find(entry => entry.fileName === 'data.json');
-        if (dataEntry) {
-            let groupsInfo, itemsInfo;
-            let { groupsData, itemsData, id, version, remoteBaseUrl, remotePath } = JSON.parse((dataEntry.buffer || (await dataEntry.readFile())).toString());
-
-            if (itemsData) {
-                groupsInfo = groupsData ? groupsData.map(group => ({
-                    id: group.id,
-                    name: group.name
-                })) : [];
-                itemsInfo = itemsData.map(mo => ({
-                    id: mo.id,
-                    group: mo.group,
-                    name: mo.name,
-                }));
-
-                return {groupsInfo, itemsInfo, remoteBaseUrl, remotePath, id: id || generateUUIDFromWord(zipFileName), version };
+        const metaEntry = entries.find(entry => entry.fileName === 'meta.json');
+        if (metaEntry) {
+            let metaInfo = JSON.parse((metaEntry.buffer || (await metaEntry.readFile())).toString());
+            if (metaInfo) {
+                return metaInfo;
             }
             return null;
         }
