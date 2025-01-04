@@ -46,3 +46,4 @@ generateContentMeta('meta-options');
 generateContentMeta('labels');
 generateContentMeta('data-buckets');
 generateContentMeta('extensions');
+generateContentMeta('templates');
