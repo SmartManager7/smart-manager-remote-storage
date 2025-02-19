@@ -20,5 +20,22 @@
             "9b9efdb2-8a8a-4807-a1e8-2d5aaaf55c5f": "d0e545c9-b340-4aa6-aff4-e7ac768caddd",
             "df2e79b9-9c33-42eb-a4e8-6bdd9102340b": "eafe93ad-f0dd-4c9d-9da4-af1ae34cc434"
         }
+    },
+    {
+        "id": "265cbf78-e314-4737-9d1b-52c86b98ad59",
+        "name": "Languages flags",
+        "remoteBaseUrl": "https://github.com/SmartManager7/smart-manager-remote-storage",
+        "remotePath": "packs/labels/3e66fec4-2761-43cb-bdc4-94f6426f1d27.zip",
+        "version": "3559bcab-8e2b-4df5-af6a-0f7cf2910d31",
+        "remoteDependencies": null,
+        "itemsVersions": {
+            "702d558d-996a-413d-9273-39345d7a8bff": "4544ec49-aee7-445f-b0ca-e5e881949a93",
+            "86283f97-d922-45b5-a971-0cc76b191455": "0b5468bf-4396-4084-8411-2cb3e612528c",
+            "9dc62776-7ada-4768-becb-6a093c30a770": "92c6bf63-7a26-468d-953b-5dfe35a63e97",
+            "b1e43998-d442-4e10-9cd4-465c65f0c2eb": "201e30c7-730b-4839-a073-90c262f2da6c",
+            "6399d702-83fd-43cf-a32d-c678442c5c8d": "2f2ee3cd-ed39-4010-8943-f76a16ac485d",
+            "14d1bf1d-6fbd-43a9-a35e-21fe30e0f4fe": "2cd67b3c-1c39-402b-a70b-b6ed62e0d34f",
+            "994cd393-6d04-45fc-994b-8f1dba6d3378": "84f99f38-0392-47b7-a4cf-c4e327fd7aa7"
+        }
     }
 ]
