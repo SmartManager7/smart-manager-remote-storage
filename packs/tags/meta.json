@@ -99,6 +99,14 @@
         }
     },
     {
+        "id": "09d28651-f798-4b5e-a274-cf9061ce409e",
+        "name": "Manga types",
+        "remoteBaseUrl": "https://github.com/SmartManager7/smart-manager-remote-storage",
+        "remotePath": "packs/tags/1f78bc54-fb23-4697-b9d8-d42687ec6506.zip",
+        "version": "ecfd1dc2-4ac9-4a2d-8e6e-6b922893fba5",
+        "itemsVersions": {}
+    },
+    {
         "id": "53e7ac89-c1fe-4dc2-b91a-3d1115522b24",
         "name": "Common Status",
         "remoteBaseUrl": "https://github.com/SmartManager7/smart-manager-remote-storage",
