@@ -29,6 +29,17 @@
         }
     },
     {
+        "id": "45116f90-102e-4a86-b7d6-4b8a83538144",
+        "name": "Manga",
+        "remoteBaseUrl": "https://github.com/SmartManager7/smart-manager-remote-storage",
+        "remotePath": "packs/meta-options/7f4094ae-cee4-4715-8751-e43501b35236.zip",
+        "version": "d2a65c7e-b4bd-4b42-b70f-3d61cbed61a9",
+        "remoteDependencies": null,
+        "itemsVersions": {
+            "4be75554-2759-4dab-9b31-56ee86d5b64d": "77b0cc1d-fbc9-4458-b2e5-00e476fb5bb4"
+        }
+    },
+    {
         "id": "aa4c00ed-f58e-4f63-9d60-3841174fc2b6",
         "name": "Games",
         "remoteBaseUrl": "https://github.com/SmartManager7/smart-manager-remote-storage",
