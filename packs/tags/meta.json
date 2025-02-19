@@ -11,5 +11,29 @@
             "CSS3": "1eb114ce-e980-4f49-a1c8-3f79fd7ab771",
             "CSS4": "b58a8691-4a6c-4bfb-85cc-51ae26d2a479"
         }
+    },
+    {
+        "id": "d2d49f49-f395-4760-8c4d-daff15488053",
+        "name": "Games Engine",
+        "remoteBaseUrl": "https://github.com/SmartManager7/smart-manager-remote-storage",
+        "remotePath": "packs/tags/9a7b6538-c6ca-44af-9803-c31aefcec255.zip",
+        "version": "a9075539-7b54-4c43-a451-f35099390b3e",
+        "itemsVersions": {
+            "GE1": "e2f7dc59-7797-4985-84d9-8804e51429d0",
+            "GE2": "558434a4-8112-4c0d-9abf-47ff443a7462",
+            "GE3": "4f80a5a1-3243-437f-afba-937483e4e085",
+            "GE4": "8e0b1627-e2fb-4ba9-84a7-5db8e691b2bf",
+            "GE5": "4603d048-dd2b-4740-8ede-5a8e8b4f7c0e",
+            "GE6": "c1e5155f-9396-42ed-be38-74692da382ef",
+            "GE7": "873f6981-f020-4a1d-a24e-121e903a198d",
+            "GE8": "2aa378cf-8e30-4a1b-b40d-c624178fa941",
+            "GE9": "f007e24e-293e-41b0-8d0a-d03a4b8932b3",
+            "GE10": "b86527a4-4058-4fef-893f-c3b42dcdf654",
+            "GE11": "e00dbe4a-4541-45dc-bd4d-012565fe8f23",
+            "GE12": "bbb66fd9-3c0f-45df-842c-9aa147e7a542",
+            "GE13": "9da5f243-7dc7-4977-b0e5-d84e384a97af",
+            "GE14": "ff736326-e91d-446d-9f99-9b9fc1a57d9a",
+            "GE15": "b21e673e-ab83-4b63-a698-f358cac3bba3"
+        }
     }
 ]
