@@ -1,0 +1,24 @@
+[
+    {
+        "id": "c94558e8-957d-4dfc-bf01-9ae6934d2d69",
+        "name": "Manga labels",
+        "remoteBaseUrl": "https://github.com/SmartManager7/smart-manager-remote-storage",
+        "remotePath": "packs/labels/3d1d491e-80c6-4b42-8e00-4c58fbe70c79.zip",
+        "version": "46b91d81-2fc5-4084-9c5c-d11eacc2bb0a",
+        "remoteDependencies": {
+            "templates": [
+                {
+                    "id": "f46bc139-c799-45b9-8b04-277848bdc26f",
+                    "remoteBaseUrl": "https://github.com/SmartManager7/smart-manager-remote-storage",
+                    "remotePath": "packs/templates/8060af20-fee1-4632-9042-ec12bd253f7a.zip"
+                }
+            ],
+            "metaOptions": null,
+            "dataBuckets": null
+        },
+        "itemsVersions": {
+            "9b9efdb2-8a8a-4807-a1e8-2d5aaaf55c5f": "d0e545c9-b340-4aa6-aff4-e7ac768caddd",
+            "df2e79b9-9c33-42eb-a4e8-6bdd9102340b": "eafe93ad-f0dd-4c9d-9da4-af1ae34cc434"
+        }
+    }
+]
