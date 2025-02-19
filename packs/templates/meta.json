@@ -1,0 +1,10 @@
+[
+    {
+        "id": "b148b806-19e3-42a0-bb4e-4b57a4579e0e",
+        "name": "Common",
+        "remoteBaseUrl": "https://github.com/SmartManager7/smart-manager-remote-storage",
+        "remotePath": "packs/templates/8060af20-fee1-4632-9042-ec12bd253f7a.zip",
+        "version": "655e7288-4de5-4ef1-9126-d17f753e635c",
+        "itemsVersions": {}
+    }
+]
