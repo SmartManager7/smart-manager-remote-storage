@@ -27,5 +27,27 @@
             "4662262f-c7ee-407b-bbe9-01f17b92b4d7": "0fbafbd2-c70e-4660-b1c7-ec057e8ec164",
             "80ee6485-9819-4d82-abfc-991a558663d7": "ff94ca9e-6d5f-4698-9d07-16a4eda08d0c"
         }
+    },
+    {
+        "id": "aa4c00ed-f58e-4f63-9d60-3841174fc2b6",
+        "name": "Games",
+        "remoteBaseUrl": "https://github.com/SmartManager7/smart-manager-remote-storage",
+        "remotePath": "packs/meta-options/a0bfd4d7-aa78-42a8-b232-d849d003a453.zip",
+        "version": "85081ce2-c51f-495a-82a3-17e4733c31af",
+        "remoteDependencies": {
+            "dataBuckets": [
+                {
+                    "id": "288dc47a-ae99-4f2b-ae20-53c56616d24b",
+                    "remoteBaseUrl": "https://github.com/SmartManager7/smart-manager-remote-storage",
+                    "remotePath": "packs/data-buckets/bc69580c-6663-43fa-85a6-38650ff7423e.zip"
+                }
+            ]
+        },
+        "itemsVersions": {
+            "2bfc81c4-0179-4828-b92a-ad4c39edbca6": "5ffb6917-a636-46d9-ab12-5b4acd3cc0c6",
+            "222111d3-482b-43ed-9b5d-484216b02c07": "49062687-016f-4877-8bb4-ba505459fdfe",
+            "16060d69-0f86-49a9-b71e-dda37bf924ce": "228d64cc-1a8d-4fd0-a0b9-607d7e9fdc7f",
+            "2cfa93dc-0980-4cc7-866b-e1ef82ae42a7": "d8efea70-7b87-47d0-9d17-30f3c568f327"
+        }
     }
 ]
