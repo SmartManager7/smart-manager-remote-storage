@@ -4,7 +4,7 @@
         "name": "Common",
         "remoteBaseUrl": "https://github.com/SmartManager7/smart-manager-remote-storage",
         "remotePath": "packs/meta-options/5d33f447-2fea-45ff-a122-a68f0bcddb97.zip",
-        "version": "e2460827-fd57-4f08-bd85-bf6aa289142f",
+        "version": "67d63156-b74a-4e89-b911-5315e4753bc5",
         "remoteDependencies": {
             "dataBuckets": [
                 {
@@ -15,8 +15,8 @@
             ]
         },
         "itemsVersions": {
-            "f96df13c-e681-43ca-ae11-8698fe729f17": "658bf9a6-ba46-4fd4-816d-a036ee56cc22",
-            "849c5208-908f-4d2b-ba51-d3cb81c98f77": "b4e7a486-6a79-4deb-add1-70f34ffc3f7f",
+            "f96df13c-e681-43ca-ae11-8698fe729f17": "78610ceb-1b07-4f97-a144-c4ea839648f7",
+            "849c5208-908f-4d2b-ba51-d3cb81c98f77": "125b1eb4-8684-444f-bd48-541f9b1be884",
             "dfa765f3-6ec0-4cab-8234-fe2f7c61bd94": "386ed0ed-560e-4aa1-9ee9-d078c31c113a",
             "7dd6e381-d4c0-444e-89bb-ced4e0c75f33": "4036c4d7-70e4-4481-b948-8cf1886a926f",
             "c78ec9cb-f2c5-448c-8ecc-ec5bd65dd6d6": "32f97ac1-37f5-4b0d-a44d-c780cd2beaf4",
